@@ -52,9 +52,9 @@ export const fetchAllTasks = (tasks) => {
 // };
 
 //Single task
-// export const fetchTask = (task) => {
-//   return {
-//     type: at.FETCH_TASK,
-//     payload: task,
-//   };
-// };
+export const fetchTask = (task) => {
+  return {
+    type: at.FETCH_TASK,
+    payload: task,
+  };
+};
