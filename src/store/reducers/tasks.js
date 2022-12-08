@@ -9,12 +9,12 @@ const allTasks = (state=[], action) => {
     //   return [...state, action.payload]
     // case at.DELETE_TASK:
     //   return state.filter(task => task.id!==action.payload);
-    // case at.EDIT_TASK:
-    //   return state.map(task => { 
-    //     return (
-    //       task.id===action.payload.id ? action.payload : task
-    //     );
-    //   });
+    case at.EDIT_TASK:
+      return state.map(task => { 
+        return (
+          task.id===action.payload.id ? action.payload : task
+        );
+      });
     default:
       return state;
   }

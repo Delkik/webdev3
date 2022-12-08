@@ -44,12 +44,12 @@ export const fetchAllTasks = (tasks) => {
 // };
 
 
-// export const editTask = (task) => {
-//   return {
-//     type: at.EDIT_TASK,
-//     payload: task,
-//   };
-// };
+export const editTask = (task) => {
+  return {
+    type: at.EDIT_TASK,
+    payload: task,
+  };
+};
 
 //Single task
 export const fetchTask = (task) => {
