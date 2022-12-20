@@ -53,15 +53,15 @@ export const addEmployeeThunk = (employee) => async (dispatch) => {
   }
 };
 
-// export const deleteEmployeeThunk = employeeId => async dispatch => {
-//   try {
-//     await axios.delete(`${path}/employees/${employeeId}`);
-//     //delete succesful so change state with dispatch
-//     dispatch(ac.deleteEmployee(employeeId));
-//   } catch(err) {
-//     console.error(err);
-//   }
-// };
+export const deleteEmployeeThunk = employeeId => async dispatch => {
+  try {
+    await axios.delete(`${path}/employees/${employeeId}`);
+    //delete succesful so change state with dispatch
+    dispatch(ac.deleteEmployee(employeeId));
+  } catch(err) {
+    console.error(err);
+  }
+};
 
 export const editEmployeeThunk = employee => async dispatch => {
   try {
@@ -84,15 +84,15 @@ export const addTaskThunk = (task) => async (dispatch) => {
   }
 };
 
-// export const deleteTaskThunk = taskId => async dispatch => {
-//   try {
-//     await axios.delete(`${path}/tasks/${taskId}`);
-//     //delete succesful so change state with dispatch
-//     dispatch(ac.deleteTask(taskId));
-//   } catch(err) {
-//     console.error(err);
-//   }
-// };
+export const deleteTaskThunk = taskId => async dispatch => {
+  try {
+    await axios.delete(`${path}/tasks/${taskId}`);
+    //delete succesful so change state with dispatch
+    dispatch(ac.deleteTask(taskId));
+  } catch(err) {
+    console.error(err);
+  }
+};
 
 export const editTaskThunk = task => async dispatch => {
   try {
