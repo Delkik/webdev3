@@ -1,0 +1,17 @@
+body{
+    background-color:darkseagreen;
+}
+
+button{
+    /* background-color:; */
+    font-weight: bold;
+    border-radius: 10px;
+    border: 0;
+    margin-top: 10px;
+    padding: 5px 10px 5px 10px;
+}
+
+.gifs{
+    margin: 15px;
+    height:400px;
+}

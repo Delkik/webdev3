@@ -28,12 +28,12 @@ export const addEmployee = (employee) => {
   };
 };
 
-// export const deleteEmployee = (employeeId) => {
-//   return {
-//     type: at.DELETE_EMPLOYEE,
-//     payload: employeeId,
-//   };
-// };
+export const deleteEmployee = (employeeId) => {
+  return {
+    type: at.DELETE_EMPLOYEE,
+    payload: employeeId,
+  };
+};
 
 
 export const editEmployee = (employee) => {
@@ -58,12 +58,12 @@ export const addTask = (task) => {
   };
 };
 
-// export const deleteTask = (taskId) => {
-//   return {
-//     type: at.DELETE_TASK,
-//     payload: taskId,
-//   };
-// };
+export const deleteTask = (taskId) => {
+  return {
+    type: at.DELETE_TASK,
+    payload: taskId,
+  };
+};
 
 
 export const editTask = (task) => {

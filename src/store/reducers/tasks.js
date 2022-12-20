@@ -7,8 +7,8 @@ const allTasks = (state=[], action) => {
       return action.payload;
     case at.ADD_TASK:
       return [...state, action.payload]
-    // case at.DELETE_TASK:
-    //   return state.filter(task => task.id!==action.payload);
+    case at.DELETE_TASK:
+      return state.filter(task => task.id!==action.payload);
     case at.EDIT_TASK:
       return state.map(task => { 
         return (
