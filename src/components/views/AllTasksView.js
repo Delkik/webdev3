@@ -6,6 +6,9 @@ const AllTasksView = (props) => {
   if (!tasks.length) {
     return (
     <div>
+      <Link to={`/`}>
+        <button>Home</button>
+      </Link>
       <p>There are no tasks.</p>
       <Link to={`/newtask`}>
         <button>Add New Task</button>
@@ -13,9 +16,12 @@ const AllTasksView = (props) => {
     </div>
     );
   }
-  console.log(tasks)
+
   return (
     <div>
+      <Link to={`/`}>
+        <button>Home</button>
+      </Link>
       {tasks.map((task) => {
         let description = task.description;
         return (
@@ -28,9 +34,9 @@ const AllTasksView = (props) => {
         );
       }
       )}
-      {/* <Link to={`/newtask`}>
+      <Link to={`/newtask`}>
         <button>Add New Task</button>
-      </Link> */}
+      </Link>
     </div>
   );
 };
