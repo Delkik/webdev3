@@ -3,11 +3,24 @@ import { Link } from "react-router-dom";
 
 const AllEmployeesView = (props) => {
   if (!props.allEmployees.length) {
-    return <div>There are no employees.</div>;
+    return (
+    <div>
+      <Link to={`/`}>
+        <button>Home</button>
+      </Link>
+      <p>There are no employees.</p>
+      <Link to={`/newemployee`}>
+        <button>Add New Employee</button>
+      </Link>
+    </div>
+    )
   }
 
   return (
     <div>
+      <Link to={`/`}>
+        <button>Home</button>
+      </Link>
       {props.allEmployees.map((employee) => {
         let name = employee.first + " " + employee.last;
         return (
@@ -20,6 +33,9 @@ const AllEmployeesView = (props) => {
         );
 
       })}
+      <Link to={`/newemployee`}>
+        <button>Add New Employee</button>
+      </Link>
     </div>
   );
 };

@@ -8,8 +8,12 @@ const EmployeeView = (props) => {
   
   return (
     <div>      
+      <Link to={`/employees`}>
+        <button>See All Employees</button>
+      </Link>
       <h1>{employee.first}</h1>
       <h3>{employee.department}</h3>
+      <Link to={`/editemployee/${employee.id}`}>Edit employee information</Link>
       <div style={{display: "flex", flexDirection: "row", justifyContent: "space-evenly"}}>
         <div>Assigned tasks:
         {assignedTasks.map( task => {
@@ -29,7 +33,7 @@ const EmployeeView = (props) => {
             <Link to={`/task/${task.id}`}>
               <h4>{task.description}</h4>
             </Link>
-            <button onClick={() => editTask({id:task.id, employeeId: employee.id})}>+</button>
+            Unassigned <button onClick={() => editTask({id:task.id, employeeId: employee.id})}>+</button>
             </div>
           );
         })}</div>

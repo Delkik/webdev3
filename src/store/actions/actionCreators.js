@@ -21,6 +21,28 @@ export const fetchEmployee = (employee) => {
   };
 };
 
+export const addEmployee = (employee) => {
+  return {
+    type: at.ADD_EMPLOYEE,
+    payload: employee,
+  };
+};
+
+// export const deleteEmployee = (employeeId) => {
+//   return {
+//     type: at.DELETE_EMPLOYEE,
+//     payload: employeeId,
+//   };
+// };
+
+
+export const editEmployee = (employee) => {
+  return {
+    type: at.EDIT_EMPLOYEE,
+    payload: employee,
+  };
+};
+
 //All tasks
 export const fetchAllTasks = (tasks) => {
   return {
@@ -29,12 +51,12 @@ export const fetchAllTasks = (tasks) => {
   };
 };
 
-// export const addTask = (task) => {
-//   return {
-//     type: at.ADD_TASK,
-//     payload: task,
-//   };
-// };
+export const addTask = (task) => {
+  return {
+    type: at.ADD_TASK,
+    payload: task,
+  };
+};
 
 // export const deleteTask = (taskId) => {
 //   return {
